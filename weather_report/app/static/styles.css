@@ -1,0 +1,50 @@
+/* app/static/style.css */
+
+.aha {
+    position: absolute; /* 绝对定位 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 10; /* 确保在其他内容之上 */
+}
+
+.head {
+    position: absolute; /* 绝对定位 */
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+}
+
+h1 {
+    color: #333;
+    position: relative;
+    left: 35%;
+}
+
+form {
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 1cap;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+

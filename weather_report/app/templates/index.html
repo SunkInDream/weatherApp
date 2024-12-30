@@ -1,0 +1,31 @@
+<!-- app/templates/index.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天气预报</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="head">
+        <h1>天气预报</h1>
+        <form method="POST">
+            <label for="city">请输入城市名称：</label>
+            <input type="text" name="city" id="city" required>
+            <button type="submit">获取天气</button>
+        </form>
+    </div>
+    {% if weather_data %}
+    <div class="aha">
+        <h2>{{ weather_data.name }} 的天气</h2>
+        <p>温度：{{ weather_data.main.temp }}°C</p>
+        <p>天气：{{ weather_data.weather[0].description }}</p>
+        <p>湿度：{{ weather_data.main.humidity }}%</p>
+        <p>风速：{{ weather_data.wind.speed }} m/s</p>
+        {% elif error_message %}
+        <p>{{ error_message }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
